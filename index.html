@@ -1,390 +1,542 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Olivia Mukherjee | CSIT-B Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+    <title>Olivia Mukherjee | CSE Portfolio</title>
 
-body {
-    font-family: Arial, sans-serif;
-    background: #0b1020;
-    color: #f5f7ff;
-    line-height: 1.6;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(11,16,32,0.96);
-    border-bottom: 1px solid #293452;
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f3ee;
+            color: #3d352f;
+            line-height: 1.6;
+        }
 
-.nav-container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 18px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #829dff;
-}
+        /* NAVBAR */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #f7f3ee;
+            border-bottom: 1px solid #ddd3ca;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.nav-links {
-    display: flex;
-    gap: 22px;
-    list-style: none;
-}
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4b3b32;
+        }
 
-.nav-links a {
-    color: #c9d1e8;
-    text-decoration: none;
-}
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
 
-.nav-links a:hover {
-    color: #829dff;
-}
+        .nav-links a {
+            color: #5c5048;
+            font-weight: 500;
+        }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 85px 25px;
-}
+        .nav-links a:hover {
+            color: #9a7258;
+        }
 
-.hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    background:
-        radial-gradient(circle at 80% 20%, #26366d, transparent 35%),
-        radial-gradient(circle at 20% 80%, #1d2853, transparent 35%);
-}
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 8%;
+        }
 
-.hero-content {
-    max-width: 750px;
-}
+        .hero-content {
+            max-width: 850px;
+        }
 
-.small-text {
-    color: #91a8ff;
-    font-size: 18px;
-    margin-bottom: 15px;
-}
+        .hero-small {
+            color: #9a7258;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
 
-.hero h1 {
-    font-size: 62px;
-    line-height: 1.1;
-    margin-bottom: 20px;
-}
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(45px, 8vw, 80px);
+            color: #4b3b32;
+            margin-bottom: 15px;
+        }
 
-.hero h1 span,
-.section-title span {
-    color: #829dff;
-}
+        .hero h2 {
+            font-size: 24px;
+            font-weight: 500;
+            color: #6b5b50;
+            margin-bottom: 20px;
+        }
 
-.hero p {
-    color: #b8c0d9;
-    font-size: 19px;
-    margin-bottom: 30px;
-}
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #75675e;
+            font-size: 17px;
+        }
 
-.buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
+        .hero-buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
 
-.btn {
-    display: inline-block;
-    padding: 13px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-}
+        .btn {
+            padding: 12px 24px;
+            border-radius: 25px;
+            border: 1px solid #9a7258;
+            transition: 0.3s;
+            font-weight: 600;
+        }
 
-.primary-btn {
-    background: #6f8cff;
-    color: white;
-}
+        .btn-primary {
+            background: #6f5545;
+            color: white;
+        }
 
-.primary-btn:hover {
-    background: #5978ef;
-}
+        .btn-primary:hover {
+            background: #4b3b32;
+        }
 
-.secondary-btn {
-    border: 1px solid #51628f;
-    color: #dce3ff;
-}
+        .btn-secondary {
+            color: #6f5545;
+        }
 
-.section-title {
-    text-align: center;
-    font-size: 38px;
-    margin-bottom: 45px;
-}
+        .btn-secondary:hover {
+            background: #e9ded5;
+        }
 
-.about,
-.skills,
-.contact {
-    background: #0e1428;
-}
+        /* SECTIONS */
+        section {
+            padding: 80px 8%;
+        }
 
-.about-box,
-.goal-box {
-    max-width: 850px;
-    margin: auto;
-    background: #151d36;
-    border: 1px solid #293452;
-    border-radius: 15px;
-    padding: 35px;
-}
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
 
-.about-box p,
-.goal-box p {
-    color: #c3cbe0;
-    font-size: 17px;
-}
+        .section-title h2 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            color: #4b3b32;
+            margin-bottom: 10px;
+        }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
+        .section-title p {
+            color: #806f64;
+        }
 
-.project-card {
-    background: #151d36;
-    border: 1px solid #293452;
-    border-radius: 15px;
-    padding: 28px;
-    transition: 0.3s;
-}
+        /* ABOUT */
+        .about {
+            max-width: 850px;
+            margin: auto;
+            background: #fffaf5;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #e3d9d0;
+            text-align: center;
+        }
 
-.project-card:hover {
-    transform: translateY(-8px);
-    border-color: #718cff;
-}
+        .about h3 {
+            font-family: Georgia, serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #5b4639;
+        }
 
-.project-number {
-    color: #829dff;
-    font-weight: bold;
-}
+        .about p {
+            color: #75675e;
+            margin-bottom: 15px;
+        }
 
-.project-card h3 {
-    margin: 12px 0;
-    font-size: 22px;
-}
+        /* SKILLS */
+        .skills-container {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
 
-.project-card p {
-    color: #b9c2da;
-    margin-bottom: 20px;
-}
+        .skill {
+            background: #fffaf5;
+            border: 1px solid #d9cbc0;
+            padding: 12px 22px;
+            border-radius: 30px;
+            color: #5d4b40;
+            font-weight: 600;
+        }
 
-.project-link {
-    color: #91a8ff;
-    text-decoration: none;
-    font-weight: bold;
-}
+        .skill:hover {
+            background: #e9ded5;
+            transform: translateY(-2px);
+        }
 
-.skills-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
+        /* PROJECTS */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
 
-.skill {
-    padding: 13px 22px;
-    background: #151d36;
-    border: 1px solid #344267;
-    border-radius: 30px;
-    color: #dce4ff;
-}
+        .project-card {
+            background: #fffaf5;
+            border: 1px solid #e0d5cc;
+            border-radius: 20px;
+            padding: 30px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
 
-.contact {
-    text-align: center;
-}
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(70, 50, 40, 0.1);
+        }
 
-.contact p {
-    color: #bdc5db;
-    margin-bottom: 25px;
-}
+        .project-card h3 {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            color: #4b3b32;
+            margin-bottom: 15px;
+        }
 
-footer {
-    text-align: center;
-    padding: 25px;
-    border-top: 1px solid #252d48;
-    color: #8992aa;
-}
+        .project-card p {
+            color: #75675e;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
 
-@media (max-width: 800px) {
-    .nav-container {
-        flex-direction: column;
-        gap: 15px;
-    }
+        .project-link {
+            display: inline-block;
+            color: #8a634d;
+            font-weight: bold;
+            border-bottom: 1px solid #8a634d;
+            width: fit-content;
+        }
 
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+        .project-link:hover {
+            color: #4b3b32;
+        }
 
-    .hero h1 {
-        font-size: 45px;
-    }
+        /* CAREER */
+        .career {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            background: #eee4db;
+            padding: 50px 30px;
+            border-radius: 25px;
+        }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
+        .career h3 {
+            font-family: Georgia, serif;
+            font-size: 32px;
+            color: #4b3b32;
+            margin-bottom: 15px;
+        }
+
+        .career p {
+            color: #6f6259;
+            font-size: 17px;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .contact-link {
+            padding: 14px 24px;
+            background: #fffaf5;
+            border: 1px solid #d9cbc0;
+            border-radius: 12px;
+            font-weight: 600;
+            color: #5b4639;
+        }
+
+        .contact-link:hover {
+            background: #e9ded5;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #ddd3ca;
+            color: #806f64;
+        }
+
+        /* MOBILE */
+        .menu-button {
+            display: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 800px) {
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                right: 8%;
+                background: #fffaf5;
+                padding: 20px;
+                border-radius: 15px;
+                border: 1px solid #ddd3ca;
+                flex-direction: column;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-button {
+                display: block;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<nav>
-    <div class="nav-container">
-        <div class="logo">OM.</div>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Olivia Mukherjee</div>
 
-        <ul class="nav-links">
+        <div class="menu-button" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#goal">Goal</a></li>
+            <li><a href="#career">Career Goal</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-    </div>
-</nav>
+    </nav>
 
-<section class="hero" id="home">
-    <div class="container">
+
+    <!-- HERO -->
+    <section class="hero" id="home">
         <div class="hero-content">
 
-            <div class="small-text">
-                3rd Semester • CSIT-B
-            </div>
+            <div class="hero-small">Hello, I'm</div>
 
-            <h1>
-                Hi, I'm <span>Olivia Mukherjee.</span>
-            </h1>
+            <h1>Olivia Mukherjee</h1>
+
+            <h2>B.Tech Computer Science | 3rd Semester</h2>
 
             <p>
-                A Computer Science and Information Technology student
-                passionate about programming, problem solving,
-                software development and learning new technologies.
+                A Computer Science student passionate about programming,
+                problem solving, learning new technologies and building
+                practical projects.
             </p>
 
-            <div class="buttons">
-                <a href="#projects" class="btn primary-btn">
-                    View My Projects
-                </a>
+            <div class="hero-buttons">
 
-                <a href="https://github.com/olivia21-11-07"
-                   target="_blank"
-                   class="btn secondary-btn">
+                <a
+                    href="https://github.com/olivia21-11-07"
+                    target="_blank"
+                    class="btn btn-primary">
                     GitHub Profile
                 </a>
+
+                <a
+                    href="https://www.hackerrank.com/profile/oliviamukherjee2"
+                    target="_blank"
+                    class="btn btn-secondary">
+                    HackerRank
+                </a>
+
             </div>
 
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="about" id="about">
-    <div class="container">
 
-        <h2 class="section-title">
-            About <span>Me</span>
-        </h2>
+    <!-- ABOUT -->
+    <section id="about">
 
-        <div class="about-box">
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Learning through practice.</p>
+        </div>
+
+        <div class="about">
+
+            <h3>Computer Science Student</h3>
+
             <p>
-                I am a 3rd-semester CSIT-B student interested in
-                programming, problem solving, software development
-                and emerging technologies. Through academic activities
-                and coding practice, I am developing practical skills
-                in programming, Git and GitHub, algorithmic thinking
-                and collaborative development.
+                I am Olivia Mukherjee, a B.Tech Computer Science student
+                currently in my 3rd semester.
             </p>
-        </div>
 
-    </div>
-</section>
+            <p>
+                I enjoy learning programming concepts, working with
+                development tools and solving coding problems.
+            </p>
 
-<section id="projects">
-    <div class="container">
+            <p>
+                My current focus is strengthening my fundamentals,
+                building projects and improving my problem-solving skills.
+            </p>
 
-        <h2 class="section-title">
-            My <span>Projects</span>
-        </h2>
-
-        <div class="projects-grid">
-
-            <div class="project-card">
-                <div class="project-number">01</div>
-                <h3>C-Based Line Editor</h3>
-                <p>
-                    A C programming project demonstrating
-                    programming logic and practical problem solving.
-                </p>
-                <a href="https://github.com/olivia21-11-07"
-                   target="_blank"
-                   class="project-link">
-                    View on GitHub →
-                </a>
-            </div>
-
-            <div class="project-card">
-                <div class="project-number">02</div>
-                <h3>LeetCode Practice</h3>
-                <p>
-                    A collection of coding practice focused on
-                    algorithms, data structures and problem solving.
-                </p>
-                <a href="https://github.com/olivia21-11-07"
-                   target="_blank"
-                   class="project-link">
-                    View on GitHub →
-                </a>
-            </div>
-
-            <div class="project-card">
-                <div class="project-number">03</div>
-                <h3>HackerRank Practice</h3>
-                <p>
-                    Programming practice using coding challenges
-                    to improve logical thinking and implementation skills.
-                </p>
-                <a href="https://github.com/olivia21-11-07"
-                   target="_blank"
-                   class="project-link">
-                    View on GitHub →
-                </a>
-            </div>
+            <p>
+                <strong>Branch:</strong> CSE-B
+            </p>
 
         </div>
 
-    </div>
-</section>
+    </section>
 
-<section class="skills" id="skills">
-    <div class="container">
 
-        <h2 class="section-title">
-            Technical <span>Skills</span>
-        </h2>
+    <!-- PROJECTS -->
+    <section id="projects">
 
-        <div class="skills-grid">
+        <div class="section-title">
+            <h2>Projects & Work</h2>
+            <p>Some of my programming and development work.</p>
+        </div>
+
+
+        <div class="projects">
+
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+
+                <h3>Hello World C</h3>
+
+                <p>
+                    A C programming repository containing basic C programs
+                    and programming practice, including a line editor
+                    implementation.
+                </p>
+
+                <a
+                    href="https://github.com/olivia21-11-07/hello-world-c"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link">
+                    View Repository →
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+
+                <h3>LeetCode Solutions</h3>
+
+                <p>
+                    A GitHub repository for practicing coding problems,
+                    algorithms and data structures through LeetCode
+                    solutions.
+                </p>
+
+                <a
+                    href="https://github.com/olivia21-11-07/leetcode-solutions"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link">
+                    View Repository →
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+            <div class="project-card">
+
+                <h3>GitLens & Live Share</h3>
+
+                <p>
+                    Practical experience with Git, GitHub, GitLens and
+                    Live Share for version control and collaborative
+                    programming workflows.
+                </p>
+
+                <a
+                    href="https://github.com/olivia21-11-07"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link">
+                    View GitHub →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <div class="section-title">
+            <h2>Skills</h2>
+            <p>Technologies and tools I am learning and using.</p>
+        </div>
+
+        <div class="skills-container">
+
             <div class="skill">C</div>
             <div class="skill">C++</div>
             <div class="skill">Python</div>
@@ -392,58 +544,98 @@ footer {
             <div class="skill">DBMS</div>
             <div class="skill">Git</div>
             <div class="skill">GitHub</div>
-            <div class="skill">Problem Solving</div>
-            <div class="skill">Data Structures & Algorithms</div>
+
         </div>
 
-    </div>
-</section>
+    </section>
 
-<section id="goal">
-    <div class="container">
 
-        <h2 class="section-title">
-            My Learning <span>Goal</span>
-        </h2>
+    <!-- CAREER GOAL -->
+    <section id="career">
 
-        <div class="goal-box">
+        <div class="section-title">
+            <h2>Career Goal</h2>
+        </div>
+
+        <div class="career">
+
+            <h3>Keep Learning. Keep Building.</h3>
+
             <p>
-                My goal is to strengthen my computer science
-                fundamentals and become a better problem solver
-                and software developer. I want to improve my
-                programming, data structures and algorithms,
-                database, Git/GitHub and project-building skills
-                through regular practice and practical projects.
+                My goal is to continuously improve my programming,
+                problem-solving and technical skills while building
+                meaningful projects and gaining practical experience
+                in Computer Science.
             </p>
+
         </div>
 
-    </div>
-</section>
+    </section>
 
-<section class="contact" id="contact">
-    <div class="container">
 
-        <h2 class="section-title">
-            Let's <span>Connect</span>
-        </h2>
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <div class="section-title">
+            <h2>Let's Connect</h2>
+            <p>Find me on these platforms.</p>
+        </div>
+
+        <div class="contact-box">
+
+            <div class="contact-links">
+
+                <a
+                    href="https://github.com/olivia21-11-07"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link">
+                    GitHub
+                </a>
+
+                <a
+                    href="https://www.hackerrank.com/profile/oliviamukherjee2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link">
+                    HackerRank
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
 
         <p>
-            Interested in technology, learning and building
-            meaningful projects.
+            © <span id="year"></span> Olivia Mukherjee
         </p>
 
-        <a href="https://github.com/olivia21-11-07"
-           target="_blank"
-           class="btn primary-btn">
-            Visit My GitHub
-        </a>
+        <p>
+            Keep Learning ♡
+        </p>
 
-    </div>
-</section>
+    </footer>
 
-<footer>
-    © 2026 Olivia Mukherjee • 3rd Semester CSIT-B
-</footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function toggleMenu() {
+            document
+                .getElementById("navLinks")
+                .classList
+                .toggle("active");
+        }
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
 
 </body>
 </html>
