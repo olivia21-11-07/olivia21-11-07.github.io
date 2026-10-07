@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olivia Mukherjee | CSIT-B Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1020;
+    color: #f5f7ff;
+    line-height: 1.6;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(11,16,32,0.96);
+    border-bottom: 1px solid #293452;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #829dff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #c9d1e8;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #829dff;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 85px 25px;
+}
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 80% 20%, #26366d, transparent 35%),
+        radial-gradient(circle at 20% 80%, #1d2853, transparent 35%);
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.small-text {
+    color: #91a8ff;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 62px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span,
+.section-title span {
+    color: #829dff;
+}
+
+.hero p {
+    color: #b8c0d9;
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary-btn {
+    background: #6f8cff;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #5978ef;
+}
+
+.secondary-btn {
+    border: 1px solid #51628f;
+    color: #dce3ff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 45px;
+}
+
+.about,
+.skills,
+.contact {
+    background: #0e1428;
+}
+
+.about-box,
+.goal-box {
+    max-width: 850px;
+    margin: auto;
+    background: #151d36;
+    border: 1px solid #293452;
+    border-radius: 15px;
+    padding: 35px;
+}
+
+.about-box p,
+.goal-box p {
+    color: #c3cbe0;
+    font-size: 17px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: #151d36;
+    border: 1px solid #293452;
+    border-radius: 15px;
+    padding: 28px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #718cff;
+}
+
+.project-number {
+    color: #829dff;
+    font-weight: bold;
+}
+
+.project-card h3 {
+    margin: 12px 0;
+    font-size: 22px;
+}
+
+.project-card p {
+    color: #b9c2da;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    color: #91a8ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    padding: 13px 22px;
+    background: #151d36;
+    border: 1px solid #344267;
+    border-radius: 30px;
+    color: #dce4ff;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    color: #bdc5db;
+    margin-bottom: 25px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #252d48;
+    color: #8992aa;
+}
+
+@media (max-width: 800px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <div class="logo">OM.</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#goal">Goal</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+
+            <div class="small-text">
+                3rd Semester • CSIT-B
+            </div>
+
+            <h1>
+                Hi, I'm <span>Olivia Mukherjee.</span>
+            </h1>
+
+            <p>
+                A Computer Science and Information Technology student
+                passionate about programming, problem solving,
+                software development and learning new technologies.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn primary-btn">
+                    View My Projects
+                </a>
+
+                <a href="https://github.com/olivia21-11-07"
+                   target="_blank"
+                   class="btn secondary-btn">
+                    GitHub Profile
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="container">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <div class="about-box">
+            <p>
+                I am a 3rd-semester CSIT-B student interested in
+                programming, problem solving, software development
+                and emerging technologies. Through academic activities
+                and coding practice, I am developing practical skills
+                in programming, Git and GitHub, algorithmic thinking
+                and collaborative development.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+
+        <h2 class="section-title">
+            My <span>Projects</span>
+        </h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-number">01</div>
+                <h3>C-Based Line Editor</h3>
+                <p>
+                    A C programming project demonstrating
+                    programming logic and practical problem solving.
+                </p>
+                <a href="https://github.com/olivia21-11-07"
+                   target="_blank"
+                   class="project-link">
+                    View on GitHub →
+                </a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-number">02</div>
+                <h3>LeetCode Practice</h3>
+                <p>
+                    A collection of coding practice focused on
+                    algorithms, data structures and problem solving.
+                </p>
+                <a href="https://github.com/olivia21-11-07"
+                   target="_blank"
+                   class="project-link">
+                    View on GitHub →
+                </a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-number">03</div>
+                <h3>HackerRank Practice</h3>
+                <p>
+                    Programming practice using coding challenges
+                    to improve logical thinking and implementation skills.
+                </p>
+                <a href="https://github.com/olivia21-11-07"
+                   target="_blank"
+                   class="project-link">
+                    View on GitHub →
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="skills" id="skills">
+    <div class="container">
+
+        <h2 class="section-title">
+            Technical <span>Skills</span>
+        </h2>
+
+        <div class="skills-grid">
+            <div class="skill">C</div>
+            <div class="skill">C++</div>
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">DBMS</div>
+            <div class="skill">Git</div>
+            <div class="skill">GitHub</div>
+            <div class="skill">Problem Solving</div>
+            <div class="skill">Data Structures & Algorithms</div>
+        </div>
+
+    </div>
+</section>
+
+<section id="goal">
+    <div class="container">
+
+        <h2 class="section-title">
+            My Learning <span>Goal</span>
+        </h2>
+
+        <div class="goal-box">
+            <p>
+                My goal is to strengthen my computer science
+                fundamentals and become a better problem solver
+                and software developer. I want to improve my
+                programming, data structures and algorithms,
+                database, Git/GitHub and project-building skills
+                through regular practice and practical projects.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="container">
+
+        <h2 class="section-title">
+            Let's <span>Connect</span>
+        </h2>
+
+        <p>
+            Interested in technology, learning and building
+            meaningful projects.
+        </p>
+
+        <a href="https://github.com/olivia21-11-07"
+           target="_blank"
+           class="btn primary-btn">
+            Visit My GitHub
+        </a>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Olivia Mukherjee • 3rd Semester CSIT-B
+</footer>
+
+</body>
+</html>
